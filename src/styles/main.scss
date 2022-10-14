@@ -1,0 +1,20 @@
+/*Imports des différents fichiers scss pour le style du site*/
+
+/*Variables, fonctions et mixins*/
+@import "./utils/animations.scss";
+@import "./utils/variables.scss";
+
+/*Fondations du ste (polices de caractère, normes appliquées sur tout le site comme box-sizing*/
+@import "./base/base.scss";
+@import "./base/typography.scss";
+
+/*Blocs BEM header et footer*/
+@import "./layouts/header";
+@import "./layouts/section-1";
+
+/*Styles des pages*/
+@import "./pages/accueil";
+@import "./pages/apropos";
+
+/*Blocs BEM indépendants comme les boutons, cards... */
+//@import "./components/";
