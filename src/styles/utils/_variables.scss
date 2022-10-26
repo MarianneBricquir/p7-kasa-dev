@@ -3,7 +3,14 @@
 $font-1: "Montserrat", "Open Sans";
 
 /*Variables couleurs*/
-$color-1: #ff6060;
-$color-2: #0000;
-$color-2-opacity: rgba(0, 0, 0, 0.3);
+$color-1: rgb(255, 96, 96);
+$color-2: rgb(0, 0, 0);
+$color-2-opacity: rgba(0, 0, 0, 0.4);
 $color-3: #fff;
+$color-3-opacity: rgba(255, 255, 255, 0.4);
+$color-4: #f6f6f6;
+
+/*Responsive break points*/
+$tablet-screen-max: 992px;
+$tablet-screen-small: 768px;
+$mobile-screen: 480px;

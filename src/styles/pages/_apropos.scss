@@ -1,4 +1,12 @@
-.apropos {
-    box-sizing: border-box;
-    margin: 100px;
+.apropos-section-2 {
+    width: 100%;
+    margin-top: 43px;
+}
+
+.apropos-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

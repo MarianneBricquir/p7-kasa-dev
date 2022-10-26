@@ -1,4 +1,30 @@
-.accueil {
-    box-sizing: border-box;
-    margin: 100px;
+.accueil-section-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-4;
+    border-radius: 25px;
+    margin-top: 43px;
+    &__cards-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: $mobile-screen) {
+    .accueil-section-2 {
+        margin-top: 20px;
+        background-color: $color-3;
+        flex-direction: column;
+        &__cards-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }

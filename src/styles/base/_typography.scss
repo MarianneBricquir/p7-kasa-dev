@@ -1,8 +1,11 @@
 /*Typographie : polices de caractère et style général des titres et paragraphes du site*/
 
 /*Import de la police Montserrat*/
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 h1 {
     color: $color-1;
+    font-family: $font-1;
+    font-size: 36px;
+    font-weight: 500;
 }

@@ -1,8 +1,20 @@
-import React from 'react';
+import { useNavigate } from "react-router-dom";
 
-const Card = () => {
+const Card = ({ annonce }) => {
+
+    let navigate = useNavigate();
+
     return (
-        <div>
+        <div className="card" onClick={() => navigate(`/annonce/${annonce.id}`)}>
+            <div className="card__content-img">
+                <img src={annonce.cover} alt="Aperçu du logement en miniature" />
+                <div className="card__content-img__title">
+                    <div className="card__content-img__title__text">
+                        {annonce.title}
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     );

@@ -10,11 +10,20 @@
 
 /*Blocs BEM header et footer*/
 @import "./layouts/header";
-@import "./layouts/section-1";
+@import "./layouts/footer";
 
 /*Styles des pages*/
+@import "./pages/pages";
 @import "./pages/accueil";
 @import "./pages/apropos";
+@import "./pages/notFound";
+
+/*Styles des composents*/
+@import "./components/card";
+@import "./components/banner";
+@import "./components/collapse";
+@import "./components/collapseV2";
+@import "./components/slideshow";
 
 /*Blocs BEM indépendants comme les boutons, cards... */
 //@import "./components/";

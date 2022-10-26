@@ -1,16 +1,26 @@
 import React from 'react';
+import Card from '../components/Card';
+import Header from '../components/Header';
+import Banner from '../components/Banner';
+import annonces from '../data/annonces.json';
+import imageAccueil from '../img/img-accueil.jpg';
 
 const Home = () => {
+    <Header />
     return (
-        <div className="accueil">
-            <section className="section-1">
-                <img className="section-1__img" src="./img-accueil.jpg" alt="Mer et falaises boisées dans le brouillard" />
-                <div className="section-1__background">
-                    <div className="section-1__background__text">Chez vous, partout et ailleurs</div>
+        <div className="pages">
+            <Banner image={imageAccueil} alt={"Mer et falaises dans le brouillard"} bannerText={"Chez vous, partout et ailleurs"} />
+            <section className="accueil-section-2">
+                <div className="accueil-section-2__cards-container">
+                    {
+                        annonces.map((annonce, index) => {
+                            return (
+                                <Card key={annonce.id} annonce={annonce} />
+                            )
+                        })
+                    }
                 </div>
 
-            </section>
-            <section className="accueil__section-2">
             </section>
         </div>
     );

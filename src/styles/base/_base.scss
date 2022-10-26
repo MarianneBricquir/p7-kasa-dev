@@ -1,7 +1,9 @@
 /*Normes appliquées sur tout le site*/
-
-.root {
+#root {
     box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
