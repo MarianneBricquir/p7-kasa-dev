@@ -1,11 +1,12 @@
 import { React } from 'react';
 import { NavLink } from "react-router-dom";
+import logoColored from '../img/logo-colored.svg';
 
 const Header = () => {
 
     return (
         <header>
-            <img className="logo-colored" src="./logo-colored.svg" alt="Logo de l'entreprise Kasa" />
+            <img className="logo-colored" src={logoColored} alt="Logo de l'entreprise Kasa" />
             <nav>
                 <ul>
                     <NavLink to="/accueil" className={(nav_item) => (nav_item.isActive ? "nav_item-active" : "")}>

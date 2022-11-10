@@ -8,17 +8,16 @@
 @import "./base/base.scss";
 @import "./base/typography.scss";
 
-/*Blocs BEM header et footer*/
-@import "./layouts/header";
-@import "./layouts/footer";
-
 /*Styles des pages*/
 @import "./pages/pages";
 @import "./pages/accueil";
 @import "./pages/apropos";
 @import "./pages/notFound";
+@import "./pages/ficheLogement";
 
 /*Styles des composents*/
+@import "./components/header";
+@import "./components/footer";
 @import "./components/card";
 @import "./components/banner";
 @import "./components/collapse";

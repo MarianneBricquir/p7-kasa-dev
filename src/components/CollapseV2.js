@@ -1,39 +1,33 @@
-import { useState } from 'react';
+/*import { useState, useEffect } from 'react';
 import icon from '../img/dropdown-open.svg';
 
 
 const Collapse = ({ items }) => {
 
-    const [selected, setSelected] = useState(false);
+    const [active, setActive] = useState(false);
 
+    const handleToggle = e => {
+        setActive(!active)
+    }
 
-    const handleToogle = (i) => {
-        if (selected === i) {
-            return setSelected(false)
-        }
-        setSelected(i)
-    };
 
     return (
         <div className='items-container'>
             {
                 items.map((item, i) => (
-                    <div className="items-container__item">
-                        <div className="items-container__item__title" onClick={() => handleToogle(i)}>
-                            <span>{item.title}</span>
-                            <span className={selected === i ? 'items-container__item__title__icon' : ''}>
-                                <img src={icon} alt="" />
-                            </span>
+                    <div className={`accordion ${active && "active"}`}>
+                        <div className="accordion__title" onClick={handleToggle}>
+                            {item.title} <img src={icon} className="accordion__icon" alt="icone du menu déroulant" />
                         </div>
-                        <div className={selected === i ? 'items-container__item__text-show' : 'items-container__item__text'}>{item.content}</div>
+                        <div className="accordion__content">{item.content}</div>
                     </div>
                 ))
             }
-        </div>
+        </div >
 
     );
 };
 
 
 
-export default Collapse;
+export default Collapse;*/

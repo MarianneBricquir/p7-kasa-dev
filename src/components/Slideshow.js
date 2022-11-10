@@ -1,11 +1,10 @@
 
 import { useState } from 'react';
-import icon from '../img/dropdown-open.svg'
+import iconLeft from '../img/arrow-left.svg';
+import iconRight from '../img/arrow-right.svg';
 
 
 const Slideshow = ({ pictures }) => {
-
-    console.log(pictures)
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -46,13 +45,12 @@ const Slideshow = ({ pictures }) => {
         }
     }
 
-    // className={(pictures) => (pictures.length > 1 ? "slideshow__left-arrow" : "slideshow__left-arrow slideshow__left-arrow--hidden ")}
 
     return (
         <div className='slideshow-container'>
             <div className='slideshow'>
-                <img src={icon} className={onePictureLeft()} alt="flèche gauche du carrousel" onClick={goToPrevious} />
-                <img src={icon} className={onePictureRight()} alt="flèche droite du carrousel" onClick={goToNext} />
+                <img src={iconLeft} className={onePictureLeft()} alt="flèche gauche du carrousel" onClick={goToPrevious} />
+                <img src={iconRight} className={onePictureRight()} alt="flèche droite du carrousel" onClick={goToNext} />
                 <div className={onePictureBullet()}>{currentIndex + 1} / {pictures.length} </div>
                 <div className='slideshow__img' style={{ backgroundImage: `url(${pictures[currentIndex]})` }}></div>
             </div >
