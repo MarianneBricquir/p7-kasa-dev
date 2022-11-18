@@ -32,7 +32,7 @@ const FicheLogement = () => {
                 }
             </ul>
             <div>{annonce.rating}</div>
-            <Collapse title="Description" content={[annonce.description]} />
+            <Collapse title="Description" content={annonce.description} />
             <Collapse title="Equipements" content={annonce.equipements} />
         </div >
     );

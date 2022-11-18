@@ -1,6 +1,5 @@
 import Banner from '../components/Banner';
-//import CollapseV2 from '../components/CollapseV2';
-import Collapse from '../components/CollapseV2';
+import Collapse from '../components/Collapse';
 import imageApropos from '../img/img-apropos.jpg';
 
 const APropos = () => {
@@ -11,7 +10,7 @@ const APropos = () => {
             <section className="apropos-section-2">
                 <div className="apropos-content">
                     <div className="accordions">
-                        <Collapse items={contentData} />
+                        <Collapse title={contentData.title} item={contentData.contents} />
                     </div>
                 </div>
             </section >
