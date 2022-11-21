@@ -43,6 +43,7 @@
         left: 50%;
         bottom: 20px;
         transform: translate(0, -50%);
+        color: $color-3;
         z-index: 1;
         &--hidden {
             visibility: hidden;

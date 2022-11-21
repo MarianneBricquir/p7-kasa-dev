@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import annonces from '../data/annonces.json';
 import Collapse from './Collapse';
+import Rating from './Rating';
 import Slideshow from './Slideshow';
 
 const FicheLogement = () => {
@@ -9,44 +10,64 @@ const FicheLogement = () => {
     //console.log(annonceId);
     const annonce = annonces.find((annonce) => annonce.id === annonceId);
 
-    /*const equipement pour faire un map et envoyer dans la variable directement */
-    /*ou tout les contents dans un tableau comme fait initialement */
-
-
     return (
         <div className='pages' >
+
+            {/*Carousel*/}
             <Slideshow key={annonce.pictures} pictures={annonce.pictures} />
-            <div className='annonce-title'>
-                <div className='annonce-title__text'>
-                    <h1> {annonce.title}</h1>
-                    <p>{annonce.location}</p>
+
+            <div className='annonce-infos-container'>
+                {/*Title and tags*/}
+                <div className='annonce-title'>
+                    <div className='annonce-title__text'>
+                        <h1> {annonce.title}</h1>
+                        <p>{annonce.location}</p>
+                    </div>
+                    <ul className='annonce-title__tags'>
+                        {
+                            annonce.tags.map((tag, index) => {
+                                return (
+                                    <li key={index}>
+                                        {tag}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
-                <div className='annonce-title__host'>
-                    <p>{annonce.host.name}</p>
-                    <div>{annonce.host.picture}</div>
+
+
+                {/*Host and rating*/}
+                <div className='annonce-hostrating'>
+                    <div className='annonce-hostrating__host'>
+                        <p className='annonce-hostrating__host__name'>{annonce.host.name}</p>
+                        <div className='annonce-hostrating__host__img-container'>
+                            <img src={annonce.host.picture} alt="Photographie de l'hôte" />
+                        </div>
+                    </div>
+                    <Rating rating={annonce.rating} />
                 </div>
+
             </div>
-            <ul>
-                {
-                    annonce.tags.map((tag, index) => {
-                        return (
-                            <li key={index}>{tag}</li>
-                        )
-                    })
-                }
-            </ul>
-            <div>{annonce.rating}</div>
-            <Collapse
-                title='Description'
-                content={annonce.description} />
-            <Collapse
-                title='Equipements'
-                content={annonce.equipments.map((equipement, index) =>
-                (<ul>
-                    <li key={index}>
-                        {equipement}
-                    </li>
-                </ul>))} />
+            {/*Description and equipements*/}
+            <div className='annonce-infos'>
+                <div className='annonce-infos__content'>
+                    <Collapse
+                        title='Description'
+                        content={annonce.description} />
+                </div>
+                <div className='annonce-infos__content'>
+                    <Collapse
+                        title='Equipements'
+                        content={
+                            annonce.equipments.map((equipement, index) =>
+                            (
+                                <li key={index}>
+                                    {equipement}
+                                </li>
+                            ))} />
+                </div>
+            </div >
         </div >
     );
 };
