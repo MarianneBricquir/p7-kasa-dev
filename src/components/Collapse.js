@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import icon from '../img/dropdown-open.svg'
+import icon from '../img/dropdown-open.svg';
 
 function Collapse({ title, content }) {
     const [active, setActive] = useState(false);
@@ -15,18 +15,12 @@ function Collapse({ title, content }) {
                     {title} <img src={icon} className="accordion__icon" alt="icone du menu déroulant" />
                 </div>
                 <div className="accordion__content">
-
-                    <ul>
-                        {content.map((item, i) => {
-                            return (
-                                <li key={i}>{item}</li>
-                            )
-                        })}
-                    </ul>
+                    {content}
                 </div>
             </div>
         </div>
     )
 }
+
 
 export default Collapse;

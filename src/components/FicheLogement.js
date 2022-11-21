@@ -1,13 +1,17 @@
 import { useParams } from 'react-router-dom'
 import annonces from '../data/annonces.json';
-import Slideshow from './Slideshow';
 import Collapse from './Collapse';
+import Slideshow from './Slideshow';
 
 const FicheLogement = () => {
 
     const { annonceId } = useParams();
     //console.log(annonceId);
     const annonce = annonces.find((annonce) => annonce.id === annonceId);
+
+    /*const equipement pour faire un map et envoyer dans la variable directement */
+    /*ou tout les contents dans un tableau comme fait initialement */
+
 
     return (
         <div className='pages' >
@@ -24,18 +28,29 @@ const FicheLogement = () => {
             </div>
             <ul>
                 {
-                    annonce.tags.map((tag, i) => {
+                    annonce.tags.map((tag, index) => {
                         return (
-                            <li key={i}>{tag}</li>
+                            <li key={index}>{tag}</li>
                         )
                     })
                 }
             </ul>
             <div>{annonce.rating}</div>
-            <Collapse title="Description" content={annonce.description} />
-            <Collapse title="Equipements" content={annonce.equipements} />
+            <Collapse
+                title='Description'
+                content={annonce.description} />
+            <Collapse
+                title='Equipements'
+                content={annonce.equipments.map((equipement, index) =>
+                (<ul>
+                    <li key={index}>
+                        {equipement}
+                    </li>
+                </ul>))} />
         </div >
     );
 };
+
+/**/
 
 export default FicheLogement;
