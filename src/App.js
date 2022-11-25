@@ -20,7 +20,7 @@ function App() {
         <Route path="/apropos" element={<APropos />} />
         <Route path="/annonce/:annonceId" element={<FicheLogement />} />
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>

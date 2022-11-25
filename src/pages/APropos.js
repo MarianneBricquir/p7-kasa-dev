@@ -8,7 +8,7 @@ const APropos = () => {
     return (
         <div className="pages">
             <Banner image={imageApropos} alt={"Vallée et montagnes sous le soleil"} bannerText={""} />
-            <section className="apropos-section-2">
+            <section className="apropos">
                 <div className="apropos-content">
                     {dataCollection.map((data, index) => {
                         return (

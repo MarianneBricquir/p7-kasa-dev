@@ -54,7 +54,7 @@ const FicheLogement = () => {
                 <div className='annonce-infos__content'>
                     <Collapse
                         title='Description'
-                        content={annonce.description} />
+                        content={[annonce.description]} />
                 </div>
                 <div className='annonce-infos__content'>
                     <Collapse

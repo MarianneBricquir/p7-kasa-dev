@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    height: 150px;
     margin-top: 24px;
 }
 
@@ -12,15 +11,19 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 52px;
+    p {
+        margin-top: 10px;
+    }
     &__tags {
         padding: 0px;
         margin: 0px;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
         list-style: none;
         margin-top: 20px;
+        max-width: 600px;
         li {
             padding: 3px 3px 3px 3px;
             display: flex;
@@ -33,6 +36,7 @@
             border-radius: 10px;
             font-size: 14px;
             margin-right: 10px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -73,6 +77,72 @@
     &__content {
         font-size: 18px;
         width: 45%;
-        height: 250px;
+    }
+}
+
+@media screen and (max-width: $tablet-screen-max) {
+    .annonce-infos {
+        flex-direction: column;
+        justify-content: flex-start;
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-screen-small) {
+    .annonce-infos-container {
+        flex-direction: column;
+    }
+
+    .annonce-title {
+        margin-bottom: 16px;
+        h1 {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .annonce-hostrating {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $mobile-screen) {
+    .annonce-title {
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+        &__tags {
+            li {
+                font-size: 12px;
+                margin-bottom: 10px;
+                margin-right: 5px;
+                padding: 1px 2px 1px 2px;
+                min-width: 95px;
+            }
+        }
+    }
+    .annonce-hostrating {
+        &__host {
+            margin: 0px;
+            &__name {
+                width: 50px;
+                font-size: 12px;
+            }
+        }
+    }
+    .annonce-infos {
+        margin: 0px;
     }
 }

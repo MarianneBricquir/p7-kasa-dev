@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <div className="pages">
             <Banner image={imageAccueil} alt={"Mer et falaises dans le brouillard"} bannerText={"Chez vous, partout et ailleurs"} />
-            <section className="accueil-section-2">
-                <div className="accueil-section-2__cards-container">
+            <section className="accueil">
+                <div className="accueil__cards-container">
                     {
                         annonces.map((annonce, index) => {
                             return (

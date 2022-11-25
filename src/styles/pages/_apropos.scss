@@ -1,6 +1,9 @@
-.apropos-section-2 {
+.apropos {
     width: 100%;
     margin-top: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .apropos-content {
@@ -8,6 +11,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 1000px;
     font-size: 24px;
 }

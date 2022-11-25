@@ -1,7 +1,7 @@
 import React from "react";
 import iconStarPink from '../img/star-pink.svg'
 import iconStar from '../img/star.svg';
-
+import PropTypes from 'prop-types';
 
 const Rating = ({ rating }) => {
 
@@ -21,3 +21,7 @@ const Rating = ({ rating }) => {
 }
 
 export default Rating;
+
+Rating.propTypes = {
+    rating: PropTypes.string
+}
