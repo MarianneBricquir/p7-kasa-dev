@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import annonces from '../data/annonces.json';
+import NotFound from '../pages/NotFound';
 import Collapse from './Collapse';
 import Rating from './Rating';
 import Slideshow from './Slideshow';
@@ -9,6 +10,19 @@ const FicheLogement = () => {
     const { annonceId } = useParams();
     //console.log(annonceId);
     const annonce = annonces.find((annonce) => annonce.id === annonceId);
+
+    //Faire une condition : si l'annonce n'existe pas = afficher page 404 - à tester
+    if (annonce == null) {
+        return <NotFound />;
+    }
+
+
+    const equipements = annonce.equipments.map((equipement, index) =>
+    (
+        <li key={index}>
+            {equipement}
+        </li>
+    ))
 
     return (
         <div className='pages' >
@@ -59,13 +73,7 @@ const FicheLogement = () => {
                 <div className='annonce-infos__content'>
                     <Collapse
                         title='Equipements'
-                        content={
-                            annonce.equipments.map((equipement, index) =>
-                            (
-                                <li key={index}>
-                                    {equipement}
-                                </li>
-                            ))} />
+                        content={equipements} />
                 </div>
             </div >
         </div >

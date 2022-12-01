@@ -21,37 +21,25 @@ const Slideshow = ({ pictures }) => {
         setCurrentIndex(newIndex);
     };
 
-    const onePictureLeft = () => {
-        if (pictures.length === 1) {
-            return ("slideshow__left-arrow slideshow__left-arrow--hidden")
-        } else {
-            return ("slideshow__left-arrow")
-        }
-    }
-
-    const onePictureRight = () => {
-        if (pictures.length === 1) {
-            return ("slideshow__right-arrow slideshow__right-arrow--hidden")
-        } else {
-            return ("slideshow__right-arrow")
-        }
-    }
-
-    const onePictureBullet = () => {
-        if (pictures.length === 1) {
-            return ("slideshow__bullet-point slideshow__bullet-point--hidden")
-        } else {
-            return ("slideshow__bullet-point")
-        }
-    }
-
-
     return (
         <div className='slideshow-container'>
             <div className='slideshow'>
-                <img src={iconLeft} className={onePictureLeft()} alt="flèche gauche du carrousel" onClick={goToPrevious} />
-                <img src={iconRight} className={onePictureRight()} alt="flèche droite du carrousel" onClick={goToNext} />
-                <div className={onePictureBullet()}>{currentIndex + 1} / {pictures.length} </div>
+                {/* Conditions ternaires si pictures.lenght === 1 pour ne pas afficher les flèches ni les bullets points avec le nombre d'img*/}
+                <img
+                    src={iconLeft}
+                    className={pictures.length === 1 ? "slideshow__left-arrow slideshow__left-arrow--hidden" : "slideshow__left-arrow"}
+                    alt="flèche gauche du carrousel"
+                    onClick={goToPrevious}
+                />
+                <img
+                    src={iconRight}
+                    className={pictures.length === 1 ? "slideshow__bullet-point slideshow__bullet-point--hidden" : "slideshow__right-arrow"}
+                    alt="flèche droite du carrousel"
+                    onClick={goToNext}
+                />
+                <div className={pictures.length === 1 ? "slideshow__bullet-point slideshow__bullet-point--hidden" : "slideshow__bullet-point"}>
+                    {currentIndex + 1} / {pictures.length}
+                </div>
                 <div className='slideshow__img' style={{ backgroundImage: `url(${pictures[currentIndex]})` }}></div>
             </div >
 

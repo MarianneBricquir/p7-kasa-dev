@@ -7,6 +7,8 @@ const Rating = ({ rating }) => {
 
     // create [1,2,3,4,5] once
     const starArray = [...Array(5).keys()].map(i => i + 1);
+
+
     return (
         <div className='stars-container'>
             {starArray.map(i => ( // use many times

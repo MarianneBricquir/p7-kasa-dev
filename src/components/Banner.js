@@ -17,12 +17,16 @@ const Banner = ({ image, alt, bannerText }) => {
 
 export default Banner;
 
+
+// Prop types
 Banner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string,
     bannerText: PropTypes.string
 };
 
+
+// Default props
 Banner.defaultProps = {
     image: "../img/img-accueil.jpg",
     alt: "Illustration de la page dans une bannière (image de nature)",

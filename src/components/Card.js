@@ -23,6 +23,8 @@ const Card = ({ annonce }) => {
 
 export default Card;
 
+
+// Prop types
 Card.propTypes = {
     annonce: PropTypes.object,
 };
