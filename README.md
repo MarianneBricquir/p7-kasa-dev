@@ -1,5 +1,4 @@
 ## Table of Contents
-[Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
 - [General Info ](#general-info-)
 - [Technologies ](#technologies-)
