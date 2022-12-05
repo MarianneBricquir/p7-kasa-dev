@@ -1,11 +1,10 @@
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
-  - [General Info ](#general-info-)
-- [Technologies ](#technologies-)
-- [Installation ](#installation-)
+[Table of Contents](#table-of-contents)
+    - [part1](#general-info)
+    - [part2](#technologies)
+    - [part3](#installation)
    
-### General Info <a name="part1"></a>
-***
+## General Info <a name="part1"></a>
 
 Kasa is a real estate rental showcase site. It presents accommodation available for rent (src directory --> data, announces.json file).
 This is the first version of the front-end for updating the site with React.
@@ -17,7 +16,6 @@ The project directory :point_right: https://github.com/MarianneBricquir/p7-kasa-
 The website hosted with Netlify :point_right: https://marianne-bricquir-p7-oc-kasa.netlify.app/accueil
 
 ## Technologies <a name="part2"></a>
-***
 A list of technologies used within the project:
 * [react](https://github.com/facebook/create-react-app): Version 18.2.0
 * [react-router-dom](https://reactrouter.com/en/main): Version 6.4.2
@@ -25,7 +23,6 @@ A list of technologies used within the project:
 
 
 ## Installation <a name="part3"></a>
-***
 A little intro about the installation. 
 ```
 $ git clone https://github.com/MarianneBricquir/p7-kasa-dev
