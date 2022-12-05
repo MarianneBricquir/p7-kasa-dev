@@ -3,6 +3,7 @@
 - [General Info ](#general-info-)
 - [Technologies ](#technologies-)
 - [Installation ](#installation-)
+- [Deployement ](#deployement-)
    
 ## General Info <a name="part1"></a>
 
@@ -29,4 +30,9 @@ A little intro about the installation.
 $ git clone https://github.com/MarianneBricquir/p7-kasa-dev
 $ npm install
 $ npm start
+```
+
+## Deployement <a name="part4"></a>
+```
+$ npm run build
 ```
