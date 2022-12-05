@@ -1,8 +1,8 @@
 ## Table of Contents
 [Table of Contents](#table-of-contents)
-    - [part1](#general-info)
-    - [part2](#technologies)
-    - [part3](#installation)
+    - [General Info](#part1)
+    - [Technologies](#part3)
+    - [Installation](#part3)
    
 ## General Info <a name="part1"></a>
 
