@@ -12,7 +12,8 @@ This is the first version of the front-end for updating the site with React.
 Then, this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 It is carried out as part of the Openclassrooms Web Developer course.
 
-The project directory :point_right: https://github.com/MarianneBricquir/p7-kasa-dev
+The project directory :point_right: https://github.com/MarianneBricquir/p7-kasa-dev.
+
 The website hosted with Netlify :point_right: https://marianne-bricquir-p7-oc-kasa.netlify.app/accueil
 
 ## Technologies <a name="part2"></a>
