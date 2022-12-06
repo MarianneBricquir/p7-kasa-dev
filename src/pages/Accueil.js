@@ -1,14 +1,12 @@
 import React from 'react';
 import Card from '../components/Card';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
 import annonces from '../data/annonces.json';
 import imageAccueil from '../img/img-accueil.jpg';
 
 const Home = () => {
-    <Header />
     return (
-        <div className="pages">
+        <main>
             <Banner image={imageAccueil} alt={"Mer et falaises dans le brouillard"} bannerText={"Chez vous, partout et ailleurs"} />
             <section className="accueil">
                 <div className="accueil__cards-container">
@@ -22,7 +20,7 @@ const Home = () => {
                 </div>
 
             </section>
-        </div>
+        </main>
     );
 };
 

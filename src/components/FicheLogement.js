@@ -25,7 +25,7 @@ const FicheLogement = () => {
     ))
 
     return (
-        <div className='pages' >
+        <main>
 
             {/*Carousel*/}
             <Slideshow key={annonce.pictures} pictures={annonce.pictures} />
@@ -76,7 +76,7 @@ const FicheLogement = () => {
                         content={equipements} />
                 </div>
             </div >
-        </div >
+        </main >
     );
 };
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
     return (
-        <div className="pages">
+        <main>
             <div className="notfound">
                 <div className="notfound__content">
                     <div className="notfound__content__erreur">404</div>
@@ -13,7 +13,7 @@ const NotFound = () => {
                     Retournez à l'accueil
                 </Link>
             </div>
-        </div>
+        </main>
     );
 };
 

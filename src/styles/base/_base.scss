@@ -1,15 +1,37 @@
 /*Normes appliquées sur tout le site*/
 #root {
     box-sizing: border-box;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 body {
     font-family: $font-1;
-    margin: 0;
+}
+
+main {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 63px 100px 43px 100px;
+}
+
+@media screen and (max-width: $tablet-screen-max) {
+    main {
+        margin: 40px 40px 20px 40px;
+    }
+}
+
+@media screen and (max-width: $tablet-screen-small) {
+    main {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: $mobile-screen) {
+    main {
+        margin: 0px 20px 0px 20px;
+    }
 }

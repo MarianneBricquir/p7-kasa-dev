@@ -6,7 +6,7 @@ import dataCollection from '../data/aproposData'
 const APropos = () => {
 
     return (
-        <div className="pages">
+        <main>
             <Banner image={imageApropos} alt={"Vallée et montagnes sous le soleil"} bannerText={""} />
             <section className="apropos">
                 <div className="apropos-content">
@@ -17,7 +17,7 @@ const APropos = () => {
                     })}
                 </div>
             </section >
-        </div >
+        </main >
     );
 };
 
