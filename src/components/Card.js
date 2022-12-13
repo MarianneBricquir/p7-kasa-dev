@@ -13,7 +13,6 @@ const Card = ({ annonce }) => {
                     <div className="card__content-img__title__text">
                         {annonce.title}
                     </div>
-
                 </div>
             </div>
 

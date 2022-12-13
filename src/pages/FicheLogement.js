@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom'
 import annonces from '../data/annonces.json';
-import NotFound from '../pages/NotFound';
-import Collapse from './Collapse';
-import Rating from './Rating';
-import Slideshow from './Slideshow';
+import NotFound from './NotFound';
+import Collapse from '../components/Collapse';
+import Rating from '../components/Rating';
+import Slideshow from '../components/Slideshow';
+
 
 const FicheLogement = () => {
 
@@ -11,16 +12,15 @@ const FicheLogement = () => {
     //console.log(annonceId);
     const annonce = annonces.find((annonce) => annonce.id === annonceId);
 
-    //Faire une condition : si l'annonce n'existe pas = afficher page 404 - à tester
+    //Si l'annonce n'existe pas, affichage de la page Erreur 404
     if (annonce == null) {
         return <NotFound />;
     }
 
-
     const equipements = annonce.equipments.map((equipement, index) =>
     (
         <li key={index}>
-            {equipement}
+            {equipement}7
         </li>
     ))
 
@@ -63,6 +63,7 @@ const FicheLogement = () => {
                 </div>
 
             </div>
+
             {/*Description and equipements*/}
             <div className='annonce-infos'>
                 <div className='annonce-infos__content'>
@@ -80,6 +81,5 @@ const FicheLogement = () => {
     );
 };
 
-/**/
 
 export default FicheLogement;

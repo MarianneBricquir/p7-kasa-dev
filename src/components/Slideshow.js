@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import iconLeft from '../img/arrow-left.svg';
 import iconRight from '../img/arrow-right.svg';
+import PropTypes from 'prop-types';
 
 
 const Slideshow = ({ pictures }) => {
@@ -48,3 +49,8 @@ const Slideshow = ({ pictures }) => {
 };
 
 export default Slideshow;
+
+
+Slideshow.propTypes = {
+    pictures: PropTypes.array
+}

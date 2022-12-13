@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import APropos from './pages/APropos';
 import Accueil from './pages/Accueil';
-import FicheLogement from './components/FicheLogement';
+import FicheLogement from './pages/FicheLogement';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
 import Footer from './components/Footer';
