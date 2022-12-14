@@ -1,3 +1,5 @@
+
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import annonces from '../data/annonces.json';
 import NotFound from './NotFound';
@@ -8,6 +10,10 @@ import Slideshow from '../components/Slideshow';
 
 const FicheLogement = () => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const { annonceId } = useParams();
     //console.log(annonceId);
     const annonce = annonces.find((annonce) => annonce.id === annonceId);
@@ -16,6 +22,8 @@ const FicheLogement = () => {
     if (annonce == null) {
         return <NotFound />;
     }
+
+
 
     const equipements = annonce.equipments.map((equipement, index) =>
     (
