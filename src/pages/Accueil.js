@@ -1,10 +1,15 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Card from '../components/Card';
 import Banner from '../components/Banner';
 import annonces from '../data/annonces.json';
 import imageAccueil from '../img/img-accueil.jpg';
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main>
             <Banner image={imageAccueil} alt={"Mer et falaises dans le brouillard"} bannerText={"Chez vous, partout et ailleurs"} />

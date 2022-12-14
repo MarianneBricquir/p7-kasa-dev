@@ -1,6 +1,5 @@
-
-import { useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import annonces from '../data/annonces.json';
 import NotFound from './NotFound';
 import Collapse from '../components/Collapse';
@@ -22,7 +21,6 @@ const FicheLogement = () => {
     if (annonce == null) {
         return <NotFound />;
     }
-
 
 
     const equipements = annonce.equipments.map((equipement, index) =>
