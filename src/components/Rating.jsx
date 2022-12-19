@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 
 const Rating = ({ rating }) => {
 
-    // create [1,2,3,4,5] once
+    // création d'un tableau [1,2,3,4,5]
     const starArray = [...Array(5).keys()].map(i => i + 1);
 
 
     return (
         <div className='stars-container'>
-            {starArray.map(i => ( // use many times
+            {starArray.map(i => ( 
                 <img
                     key={i}
                     src={rating >= i ? `${iconStarPink}` : `${iconStar}`}
