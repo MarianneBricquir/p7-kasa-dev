@@ -9,12 +9,13 @@ import Slideshow from '../components/Slideshow';
 
 const FicheLogement = () => {
 
+    // React router dom v 6.4 : https://reactrouter.com/en/main/components/scroll-restoration
+    // React router dom v 5 : https://v5.reactrouter.com/web/guides/scroll-restoration
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     const { annonceId } = useParams();
-    //console.log(annonceId);
     const annonce = annonces.find((annonce) => annonce.id === annonceId);
 
     //Si l'annonce n'existe pas, affichage de la page Erreur 404
