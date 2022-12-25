@@ -8,7 +8,6 @@ const Rating = ({ rating }) => {
     // création d'un tableau [1,2,3,4,5]
     const starArray = [...Array(5).keys()].map(i => i + 1);
 
-
     return (
         <div className='stars-container'>
             {starArray.map(i => ( 

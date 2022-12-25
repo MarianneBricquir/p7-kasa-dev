@@ -33,7 +33,7 @@ const FicheLogement = () => {
         <ScrollRestoration />
         
         {/*Carousel*/}
-        <Slideshow key={annonce.pictures} pictures={annonce.pictures} />
+        <Slideshow pictures={annonce.pictures} />
 
         <div className="annonce-infos-container">
           {/*Title and tags*/}
